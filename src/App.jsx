@@ -1,9 +1,10 @@
-import { useReducer, useState } from 'react'
+import { useEffect, useReducer, useState } from 'react'
 import { INITIAL_STATE, postReducer } from './reducers/postReducer'
 import { ACTION_TYPE } from './actionTypes/postActionTypes'
 import './App.css'
-import Form from './components/Form'
-
+// import Form from './components/Form'
+import Counter from './components/Counter/Counter'
+import ProfileCared from './components/Counter/ProfileCared'
 
 
 
@@ -31,7 +32,9 @@ function App() {
       </button>
       <p>{state.post.title}</p>
       <span>{state.error && "Something went wrong"}</span> */}
-      <Form/>
+      {/* <Form/> */}
+      {/* <Counter/> */}
+      <ProfileCared/>
     </>
   )
 }
