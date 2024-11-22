@@ -5,13 +5,16 @@ import './App.css'
 // import Form from './components/Form'
 import Counter from './components/Counter/Counter'
 import ProfileCared from './components/Counter/ProfileCared'
+import UseRefHook from './components/UseRefHook/UseRefHook'
+import Profile from './components/Profile'
+import Footer from './components/Footer'
 
 
 
 function App() {
   // dispatch allows us to send a message to the reducer
   const [state, dispatch] = useReducer(postReducer, INITIAL_STATE)
-  
+
   const handleFetch = () => {
     dispatch({ type: ACTION_TYPE.FETCH_START })
     fetch("https://jsonplaceholder.typicode.com/posts/1")
@@ -34,7 +37,10 @@ function App() {
       <span>{state.error && "Something went wrong"}</span> */}
       {/* <Form/> */}
       {/* <Counter/> */}
-      <ProfileCared/>
+      {/* <ProfileCared/> */}
+      {/* <UseRefHook/> */}
+      <Profile />
+      <Footer />
     </>
   )
 }
